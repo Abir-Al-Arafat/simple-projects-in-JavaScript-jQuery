@@ -15,8 +15,8 @@
         </header>
 
         <section>
-            <div id="results"></div>
-            <form action="" name="quizForm" onsubmit="return submitAnswers()">
+            
+            <form name="quizForm" onsubmit="return submitAnswers(); return false;">
                     <div class="questions">
                     <div id="ques1">
                         <h3>1. In which HTML element do we put in JavaScript code?</h3>
@@ -58,9 +58,9 @@
                     </div>
                     <input type="submit" value="Submit Answers" class="btn">
                     </div>
-
 					
             </form>
+            <div id="results"></div>
         </section>
 
         <footer>

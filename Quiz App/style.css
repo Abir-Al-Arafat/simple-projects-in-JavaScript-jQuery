@@ -58,8 +58,12 @@ footer{
     text-align: center;
 }
 
+#results{
+    text-align: center;
+}
+
 #results h3{
-    background:  #f7cac9;
+    background:  #00204a;
     padding: 10px 12px;
     margin: 10px 0;
 }
