@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let speed = 500; //fade speed when button is clicked
-    let autoSwitch = true //auto slider option
-    let autoSwitchSpeed = 3000 // auto slider speed
+    let autoSwitch = true //auto slider option (on/off)
+    let autoSwitchSpeed = 2000 // auto slider speed
 
     // adds active class
     $('.slide').first().addClass('active')
