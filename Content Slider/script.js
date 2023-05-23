@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    let speed = 500; //fade speed
+    let speed = 500; //fade speed when button is clicked
     let autoSwitch = true //auto slider option
     let autoSwitchSpeed = 3000 // auto slider speed
 
@@ -12,7 +12,8 @@ $(document).ready(function(){
     // shows the element which has active class
     $('.active').show()
 
-    $('#next').on('click', ()=>{
+    // function for moving to next slide
+    function onNextSlide(){
         $('.active').removeClass('active').addClass('oldActive');
         if($('.oldActive').is(':last-child')){
             $('.slide').first().addClass('active')
@@ -22,9 +23,10 @@ $(document).ready(function(){
         $('.oldActive').removeClass('oldActive')
         $('.slide').fadeOut(speed)
         $('.active').fadeIn(speed)
-    })
+    }
 
-    $('#prev').on('click', ()=>{
+    // function for moving to previous slide
+    function onPrevSlide() {
         $('.active').removeClass('active').addClass('oldActive')
         if($('.oldActive').is(':first-child')){
             $('.slide').last().addClass('active')
@@ -34,5 +36,19 @@ $(document).ready(function(){
         $('.oldActive').removeClass('oldActive')
         $('.slide').fadeOut(speed)
         $('.active').fadeIn(speed)
-    })
+    }
+
+    // goes to next slide if clicked
+    $('#next').on('click', onNextSlide)
+
+    // goes to previous slide if clicked
+    $('#prev').on('click', onPrevSlide)
+
+    // autoslider
+    // if(autoSwitch){
+    //     setInterval(onNextSlide, autoSwitchSpeed)
+    // }
+
+    autoSwitch && setInterval(onNextSlide, autoSwitchSpeed)
+
 })
