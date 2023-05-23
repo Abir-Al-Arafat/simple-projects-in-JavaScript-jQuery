@@ -1,0 +1,1 @@
+1. jQuery UI is used for accordion
