@@ -23,6 +23,7 @@ ul,li{
     margin: 30px auto;
     padding: 10px 12px;
     overflow: auto;
+    transition: all 0.5s ease-in;
 }
 
 h1{
@@ -49,11 +50,19 @@ h1{
     font-weight: bold;
     font-size: 110%;
     border-bottom: 3px solid #aaa;
+    cursor: pointer;
+}
+
+.rotate{
+    /* -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg); */
+    transform: rotate(90deg);
+    /* transition: all 0.3s ease-in; */
 }
 
 .faq li.answer{
     background: #eee;
-    /* display: none; */
+    display: none;
 }
 
 @media(max-width: 768px){
