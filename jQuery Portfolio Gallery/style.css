@@ -47,6 +47,7 @@ nav ul li{
     list-style: none;
     float: left;
     margin-top: 0.5rem;
+    margin-right: 0.5rem;
     padding: 0 10px;
 }
 
@@ -56,7 +57,11 @@ nav a{
     transition: all 0.3s ease-in;
 }
 
-nav li.current, nav a:hover{
+nav a:hover, nav a.current{
+    color: #03899c;
+}
+
+nav li.current, nav li:hover{
     color: #03899c;
     border-bottom: 1px solid #03899c;
 }
