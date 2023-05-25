@@ -30,4 +30,45 @@ $(document).ready(function(){
         // stops link behaviour
         return false
     })
+
+    $('ul#gallery li').on('mouseenter', function(){
+        // data attribute values 
+        let title = $(this).children().data('title')
+        let desc = $(this).children().data('desc')
+
+        // validation
+        if(desc == null || desc == ''){
+            desc = 'Click To Enlarge'
+        }
+
+        if(title == null){
+            title = ''
+        }
+
+        // creating overlay div
+        $(this).append(`<div class="overlay"></div>`)
+
+        // getting overlay div
+        let overlay = $(this).children('.overlay')
+        console.log(overlay);
+
+        // adding html to overlay
+        overlay.html(`<h3>${title}</h3> <p>${desc}</p>`)
+        console.log(overlay)
+
+        // fade in overlay
+        overlay.fadeIn(600)
+    })
+
+    // mouse leave overlay
+    $('ul#gallery li').on('mouseleave', function(){
+        // creating overlay div
+        $(this).append(`<div class="overlay"></div>`)
+
+        // getting overlay div
+        let overlay = $(this).children('.overlay')
+
+        // fade out overlay
+        overlay.fadeOut(400)
+    })
 })
