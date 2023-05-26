@@ -132,3 +132,41 @@ footer{
     margin: 0;
     padding: 0;
 }
+
+@media(max-width: 768px){
+    .logo, nav{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    nav ul, nav ul li{
+        float: none;
+        padding: 0;
+    }
+
+    nav li{
+        margin-bottom: 1rem;
+    }
+
+    nav li.current, nav li:hover{
+        color: #03899c;
+        border-bottom: none;
+    }
+
+    #gallery li{
+        width: 48%;
+        margin-right: 8px;
+    }
+}
+
+@media(max-width: 568px){
+    #gallery li{
+        width: 100%;
+        margin-right: 0;
+    }
+}
