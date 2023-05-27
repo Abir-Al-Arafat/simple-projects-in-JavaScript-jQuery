@@ -69,3 +69,9 @@ footer{
     text-align: center;
     margin-top: 1rem;
 }
+
+#result{
+    color: #f4f4f4;
+    letter-spacing: 2px;
+    text-align: center;
+}
